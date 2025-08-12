@@ -1,9 +1,9 @@
-import 'package:boarding1/core/const.dart';
+import 'package:boarding1/models/const.dart';
 import 'package:boarding1/core/lang.dart';
 import 'package:boarding1/core/theme.dart';
 import 'package:boarding1/models/datas.dart';
 import 'package:boarding1/services/provider.dart';
-import 'package:boarding1/slider_provider.dart';
+import 'package:boarding1/services/slider_provider.dart';
 import 'package:boarding1/views/widgets/appbar.dart';
 import 'package:boarding1/views/widgets/bottom_nav.dart';
 import 'package:boarding1/views/widgets/category.dart';

@@ -1,4 +1,4 @@
-import 'package:boarding1/core/const.dart';
+import 'package:boarding1/models/const.dart';
 import 'package:boarding1/core/lang.dart';
 import 'package:boarding1/core/theme.dart';
 import 'package:boarding1/models/datas.dart';

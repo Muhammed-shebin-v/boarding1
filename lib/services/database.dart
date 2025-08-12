@@ -49,7 +49,6 @@ class DatabaseHelper {
     );
   }
 
-  /// Insert Datas + Contents
   Future<void> insertDatas(Datas data) async {
     final dbClient = await database;
 
