@@ -13,16 +13,7 @@ class ApiService {
       if (response.statusCode == 200) {
         log('we got the datas');
         final List<dynamic> data = jsonDecode(response.body);
-
-      final dbHelper = DatabaseHelper();
-
-      for (var item in data) {
-        final dataObj = Datas.fromJson(item);
-        await dbHelper.insertDatas(dataObj);
-       log("✅ Data saved to Sqflite");
-      
-      }
-      return data.map((json) => Datas.fromJson(json)).toList();
+        return data.map((json) => Datas.fromJson(json)).toList();
        } else {
         log('API Error: ${response.statusCode}');
         return [];
@@ -32,4 +23,6 @@ class ApiService {
       return [];
     }
   }
+
+
 }

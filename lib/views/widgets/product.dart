@@ -33,6 +33,7 @@ class ProductCard extends StatelessWidget {
             ),
             child: const Icon(Icons.image, size: 40, color: Colors.grey),
           ),
+          Expanded(child: SizedBox(),),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
@@ -40,7 +41,7 @@ class ProductCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(4),
             ),
             child: Text(
-              'Sale ${product.discount}% Off',
+              'Sale ${product.discount}',
               style: const TextStyle(
                 color: AppColors.black,
                 fontSize: 6,
@@ -75,7 +76,7 @@ class ProductCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '£${product.offerPrice}',
+                      product.offerPrice!,
                       style: const TextStyle(
                         fontSize: 6,
                         color: AppColors.black,
@@ -83,7 +84,7 @@ class ProductCard extends StatelessWidget {
                     ),
                     const Gap(4),
                     Text(
-                      '£${product.actualPrice}',
+                      product.actualPrice!,
                       style: const TextStyle(
                         fontSize: 6,
                         decoration: TextDecoration.lineThrough,

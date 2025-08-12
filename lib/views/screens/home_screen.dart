@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
   Widget _buildCarousel(context, List<Content> contents ) {
     final carouselProvider = Provider.of<CarouselIndexProvider>(context);
     return SizedBox(
-      height: 104,
+      height: 124,
       child: Column(
         children: [
           Expanded(

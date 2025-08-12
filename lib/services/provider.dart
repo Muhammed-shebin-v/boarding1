@@ -1,3 +1,7 @@
+
+
+import 'dart:developer';
+
 import 'package:boarding1/models/datas.dart';
 import 'package:boarding1/services/api.dart';
 import 'package:boarding1/services/database.dart';
@@ -35,6 +39,8 @@ class ProductProvider with ChangeNotifier {
     if (data.isNotEmpty) {
       _allItems = data;
       _filterProducts();
+      _addToDB(data);
+
     } else {
       _errorMessage = "Failed to fetch data";
       fetchFromDatabase();
@@ -96,5 +102,13 @@ class ProductProvider with ChangeNotifier {
             .toList();
    
 }
-
+  Future<void> _addToDB(data)async{
+ final dbHelper = DatabaseHelper();
+      for (var item in data) {
+        final dataObj = Datas.fromJson(item);
+        await dbHelper.insertDatas(dataObj);
+       log("✅ Data saved to Sqflite");
+      
+      }
+  }
 }
